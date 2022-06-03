@@ -153,8 +153,15 @@ class App extends Component {
         (student) => student.studentId !== selectedstudent.studentId
       );
 
+      let emptyStudent = { dateOfBirth: this.getdateString(new Date()) };
       this.setState({
         studentsList: updatedstudentsList,
+        currentStudent: emptyStudent,
+        departmentSelected: [],
+        buttonStatus: "Add",
+        formValid: false,
+        emailValid: false,
+        mobileValid: false,
       });
     });
   };
